@@ -124,7 +124,7 @@ python app.py
 
 ---
 
-## ♻️ Suggested Improvements
+## ♻️ Suggested Improvements for Future enhancements
 
 * Add prediction confidence and only send alerts above a threshold.
 * Support live video/CCTV streams (frame-sampling + inference pipeline).
