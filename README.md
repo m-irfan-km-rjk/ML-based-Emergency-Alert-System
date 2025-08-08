@@ -129,9 +129,11 @@ python app.py
 * Add prediction confidence and only send alerts above a threshold.
 * Support live video/CCTV streams (frame-sampling + inference pipeline).
 * Add user/role authentication for the web UI and an audit log for sent alerts.
-* Store alerts in a database (timestamp, label, confidence, location, image) for later analysis.
 * Deploy behind a production-ready server (Gunicorn + nginx) and enable HTTPS.
+* Reduce false alarms with multi-frame confirmation.
+* Store incidents in a database for analytics and hotspot mapping.
 
+Enable offline mode with queued alerts for poor connectivity.
 ---
 
 ## 📝 License
