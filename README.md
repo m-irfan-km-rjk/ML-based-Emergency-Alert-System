@@ -69,4 +69,4 @@ Enter the full path to the image you want to test: /path/to/image.jpg
 This project is open-source and available under the **MIT License**.
 
 ---
-💡 *Developed with a mission to improve emergency response through AI.*
+💡 *Developed with a mission to improve emergency response through AI. *
