@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emergency Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>🚨 Emergency Detection</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*" required>
+      <button type="submit">Upload & Detect</button>
+    </form>
+
+    {% if prediction %}
+      <div class="result">
+        <h2>Prediction: {{ prediction.upper() }}</h2>
+        <p><strong>Location:</strong> {{ city }}, {{ state }}, {{ country }}</p>
+        <p><a href="{{ map_url }}" target="_blank">🗺 View on Map</a></p>
+        <p>{{ sms_status }}</p>
+
+        {% if image_data %}
+          <img src="data:image/jpeg;base64,{{ image_data }}" class="uploaded-preview" alt="Uploaded Image">
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
